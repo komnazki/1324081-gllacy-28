@@ -6,18 +6,64 @@ html {
     box-sizing: inherit;
 }
 
+:root {
+    --basic-olive: rgb(132, 157, 143);
+    --basic-grey: rgb(50, 50, 50);
+    --white: rgb(255, 255, 255);
+    --grey: rgb(128, 128, 128);
+    --black: rgb(0, 0, 0);
+    --dark-grey: rgb(90, 90, 90);
+    --social: rgba(255, 255, 255, 0.5);
+    --nav-hover: rgb(248, 247, 244); 
+    --nav-active: rgb(208, 112, 88); 
+    --nav-line: rgb(209, 206, 207);
+    --nav-background: rgba(255, 255, 255, 0.2);
+    --text-decoration: rgba(255, 255, 255, 0.4);   
+    --shadow: rgba(0, 0, 0, 0.4);
+    --shadow2: rgba(0, 0, 0, 0.2); 
+    --coral: rgb(255, 188, 158);
+    --coral-hover: rgb(251, 222, 215);
+    --coral-active: rgb(246, 181, 165);
+    --input-border: rgb(210, 210, 210);
+    --input-border2: rgb(119, 119, 119);
+    --input-border3: rgba(178, 178, 178, 0.5);
+    --input-border4: rgba(46, 136, 228, 0.5);
+    --input-border5: rgba(154, 154, 154, 0.5); 
+    --form-grey: rgba(50, 50, 50, 0.3);
+    --price-grey: rgba(50, 50, 50, 0.5);
+    --tomato: rgb(255, 99, 71);
+    --tomato-decoration: rgba(255, 99, 71, 0.3);
+    --button-background: rgb(242, 104, 67);
+    --button-shadow: rgba(160, 32, 11, 0.8);
+    --button-shadow2: rgb(172, 16, 0);
+    --button-shadow3: rgba(172, 16, 0, 0.6);
+    --button-shadow4: rgba(0, 0, 0, 0.1);
+    --button-gradient: rgb(232, 77, 55);
+    --button-gradient2:rgba(225, 225, 225, 0.2);
+    --button-red: rgb(148, 39, 24);
+    --advantages-back: rgb(236, 225, 201);
+    --color-map: rgb(193, 233, 183);
+    --feedback-textarea: rgb(153, 153, 153);
+    --feedback-close: rgb(35, 35, 35);
+    --basket-line: rgb(202, 202, 199);
+    --filter-line: rgba(250, 250, 250, 0.5);
+    --filter-background: rgba(255, 255, 255, 0.9);
+    --theme2: rgb(137, 150, 166);
+    --theme3: rgb(157, 139, 132);
+}
+
 body {
     width: 100%;
     font-family: "Roboto", Arial, sans-serif;
     font-size: 14px;
     line-height: 24px;
-    color: rgb(50, 50, 50);
-    background-color: rgb(132, 157, 143);
+    color: var(--basic-grey);
+    background-color: var(--basic-olive);
     margin: 0;
 }
 
 body h1 {
-    color: rgb(255, 255, 255);
+    color: var(--white);
     font-size: 35px;
     line-height: 41px;
 }
@@ -55,26 +101,25 @@ input[type="radio"].visually-hidden {
 }
 
 .page-wrapper-1 {
-    background-color: rgb(132, 157, 143);
+    background-color: var(--basic-olive);
     background-image: url("../img/index-icecream1.png");
 }
 
 .page-wrapper-2 {
-    background-color: rgb(137, 150, 166);
+    background-color: var(--theme2);
     background-image: url("../img/index-icecream2.png");
 }
 
 .page-wrapper-3 {
-    background-color: rgb(157, 139, 132);
+    background-color: var(--theme3);
     background-image: url("../img/index-icecream3.png");
 }
-
 
 .slider {
     position: relative;
     padding-top: 260px;
     text-align: center;
-    color: rgb(255, 255, 255);
+    color: var(--white);
 }
 
 .slider-list {
@@ -115,23 +160,26 @@ input[type="radio"].visually-hidden {
     height: 21px;
     padding: 0;
     background-color: transparent;
-    border: 2px solid rgb(255, 255, 255);
+    border: 2px solid var(--white);
     border-radius: 50%;
     cursor: pointer;
+    outline: none;
     transition: all .3s;
 }
 
 .slider-toggles .current {
-    background-color: rgb(255, 255, 255);
+    background-color: var(--white);
 }
 
 .slider-toggles button:hover,
 .slider-toggles button:focus {
-    background-color: rgb(255, 255, 255, 0.4);
+    background: var(--social);
 }
 
 .slider-toggles button:active {
-    background-color: rgb(255, 255, 255);
+    background-color: var(--white);
+    outline: none;
+    border: none;
 }
 
 .button-slider {
@@ -170,20 +218,20 @@ input[type="radio"].visually-hidden {
 }
 
 .site-nav-link {
-    color: rgb(255, 255, 255);
+    color: var(--white);
     font-size: 16px;
     font-weight: bold;
-    text-decoration-color: rgba(255, 255, 255, 0.400);
+    text-decoration-color: var(--text-decoration);
     padding: 6px 14px;
 }
 
 .site-nav-link:hover, 
 .site-nav-link:focus {
-    color: rgb(50, 50, 50);
+    color: var(--basic-grey);
     font-weight: bold;
     text-decoration: none;
     border-radius: 50px;
-    background-color: rgb(248, 247, 244); 
+    background-color: var(--nav-hover); 
     outline: none;
 }
 
@@ -198,12 +246,12 @@ input[type="radio"].visually-hidden {
 }
 
 .site-nav-active {
-    color: rgb(255, 255, 255);
+    color: var(--white);
     font-size: 16px;
     font-weight: bold;
     padding: 6px 14px;
     border-radius: 50px;
-    background-color: rgb(208, 112, 88);    
+    background-color: var(--nav-active);    
     cursor: default;
 }
 
@@ -218,9 +266,9 @@ input[type="radio"].visually-hidden {
     margin: 0;
     padding: 0;
     padding-bottom: 5px;
-    background-color:rgb(248, 247, 244);
+    background-color:var(--nav-hover);
     border-radius: 4px;
-    box-shadow: 0px 20px 20px 0 rgba(0, 0, 0, 0.4);
+    box-shadow: 0px 20px 20px 0 var(--shadow);
     z-index: 10;
 }
 
@@ -246,7 +294,7 @@ input[type="radio"].visually-hidden {
     padding: 10px 5px 5px 21px;
     font-size: 14px;
     line-height: 16px;
-    color: rgb(50, 50, 50);
+    color: var(--basic-grey);
     text-decoration: none;
     outline: none;
     transition: all 0.3s;  
@@ -258,19 +306,19 @@ input[type="radio"].visually-hidden {
 
 .nav-catalog-item a:hover,
 .nav-catalog-item a:focus {
-    background-color:rgb(251, 222, 215);
+    background-color:var(--coral-hover);
     transition: all 0.3s;
 }
 
 .nav-catalog-item a:active {
-    background-color: rgb(246, 181, 165);
+    background-color: var(--coral-active);
     transition: all 0.3s;
 }
 
 .nav-catalog-top a {
     border-left: 5px solid transparent;
     border-right: 60px solid transparent;
-    border-bottom: 1px solid rgb(209, 206, 207);
+    border-bottom: 1px solid var(--nav-line);
     font-weight: 700;
     text-decoration: none;
     padding-left: 15px;
@@ -280,8 +328,8 @@ input[type="radio"].visually-hidden {
 
 .hover-item-current a {
     border-right: 45px solid transparent;
-    background-color:rgb(208, 112, 88);
-    color:rgb(255, 255, 255);
+    background-color:var(--nav-active);
+    color:var(--white);
     transition: all 0.3s;
     padding-right: auto;
 }
@@ -311,20 +359,20 @@ input[type="radio"].visually-hidden {
   display: block;
   position: relative;
   padding-left: 26px;
-  color: rgb(255, 255, 255);
+  color: var(--white);
   font-size: 14px;
   font-weight: 500;
   text-decoration: none;
   line-height: 32px;
   min-height: 32px;
   border-radius: 50px;
-  background-color: rgba(255, 255, 255, 0.200);  
+  background-color: var(--nav-background);  
   padding: 0 16px 0 44px;
 }
 
 .user-link:hover,
 .user-link:focus {
-    color: rgb(50, 50, 50);
+    color: var(--basic-grey);
     display: block;
     position: relative;
     padding-left: 26px;
@@ -334,14 +382,14 @@ input[type="radio"].visually-hidden {
     line-height: 32px;
     min-height: 32px;
     border-radius: 50px;
-    background-color: rgb(248, 247, 244); 
+    background-color: var(--nav-hover); 
     padding: 0 16px 0 44px;
     outline: none;
 }
 
 .user-link:hover,
 .user-link:focus .user-link-text {
-    color: rgb(50, 50, 50);
+    color: basic-grey;
     outline: none;
 }
 
@@ -349,14 +397,14 @@ input[type="radio"].visually-hidden {
     display: block;
     position: relative;
     padding-left: 26px;
-    color: #323232;
+    color: var(--basic-grey);
     font-size: 14px;
     font-weight: 500;
     text-decoration: none;
     line-height: 32px;
     min-height: 32px;
     border-radius: 50px;
-    background-color: rgb(248, 247, 244); 
+    background-color: var(--nav-hover); 
     padding: 0 16px 0 44px;
     outline: none;
 }
@@ -382,21 +430,21 @@ input[type="radio"].visually-hidden {
     width: 32px;
     height: 32px;
     border-radius: 50%;
-    background-color:rgba(255, 255, 255, 0.200);
+    background-color:var(--nav-background);
     color: white;
     padding: 0;
 }
 
 .user-link-search:hover,
 .user-link-search:focus {
-    color: rgb(50, 50, 50);
+    color: var(--basic-grey);
     display: flex;
     align-items: center;
     justify-content: center;
     width: 32px;
     height: 32px;
     border-radius: 50%;
-    background-color:rgb(248, 247, 244);
+    background-color:var(--nav-hover);
     padding: 0;
     outline: none;
 }
@@ -415,8 +463,8 @@ input[type="radio"].visually-hidden {
     right: 0px;
     top: 38px;
     padding: 20px 15px;
-    background: rgb(248, 247, 244);
-    box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.4);
+    background: var(--nav-hover);
+    box-shadow: 0px 20px 20px var(--shadow);
     border-radius: 4px;
     transition: all .2s;
 }
@@ -444,21 +492,21 @@ input[type="radio"].visually-hidden {
     padding-right: 15px;
     line-height: 24px;
     font-weight: 700;
-    color: rgb(50, 50, 50);
-    background: rgb(255, 255, 255);
-    border: 1px solid rgb(210, 210, 210);
+    color: var(--basic-grey);
+    background: var(--white);
+    border: 1px solid var(--input-border);
     box-sizing: border-box;
     border-radius: 4px;
     outline: none;
 }
 
 .search-form input::placeholder {
-    color:rgb(119, 119, 119);
+    color:var(--input-border2);
     font-weight: 400;
 }
 
 .search-form input:hover {
-    border: solid 2px rgba(46, 136, 228, 0.52);
+    border: solid 2px var(--input-border4);
 }
 
 .user-link:hover + .user-form,
@@ -475,8 +523,8 @@ input[type="radio"].visually-hidden {
     right: 0px;
     top: 38px;
     padding: 20px 18px;
-    background: rgb(248, 247, 244);
-    box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.4);
+    background: var(--nav-hover);
+    box-shadow: 0px 20px 20px var(--shadow);
     border-radius: 4px;
 }
 
@@ -503,23 +551,23 @@ input[type="radio"].visually-hidden {
     padding-left: 15px;
     padding-right: 15px;
     line-height: 24px;
-    color: rgb(50, 50, 50);
+    color: var(--basic-grey);
     font-weight: 700;
-    background: rgb(255, 255, 255);
-    border: 1px solid rgb(210, 210, 210);
+    background: var(--white);
+    border: 1px solid var(--input-border);
     box-sizing: border-box;
     border-radius: 4px;
     outline: none;
 }
 
 .user-form input::placeholder {
-    color:rgb(119, 119, 119);
+    color: var(--input-border2);
     font-weight: 400;
 }
 
 .user-form input:hover,
 .user-form input:focus {
-    border: solid 2px rgba(46, 136, 228, 0.52);
+    border: solid 2px var(--input-border4);
 }
 
 .user-form-bottom-container {
@@ -548,19 +596,19 @@ input[type="radio"].visually-hidden {
 }
 
 .user-form-link {
-    color:rgb(50, 50, 50);
+    color: var(--basic-grey);
     font-size: 13px;
     line-height: 24px;
     text-decoration: underline;
-    text-decoration-color: rgba(50, 50, 50, 0.3);
+    text-decoration-color: var(--form-grey);
     padding: 0;
     margin: 0;
 }
 
 .user-form-link:hover,
 .user-form-link:focus {
-    color:rgb(255, 188, 158);
-    text-decoration-color: rgba(255, 188, 158, 0.5);
+    color: var(--tomato);
+    text-decoration-color: var(--tomato-decoration);
 }
 
 .info {
@@ -569,13 +617,13 @@ input[type="radio"].visually-hidden {
     grid-row: 2 / 3;
     font-size: 14px;
     line-height: 26px;
-    color: #ffffff;
+    color: var(--white);
     text-align: right;
     font-weight: bold;
 }
 
 .info a {
-    color: rgb(255, 255, 255);
+    color: var(--white);
     font-weight: bold;
     text-align: right;
     font-size: 22px;
@@ -586,21 +634,21 @@ input[type="radio"].visually-hidden {
 .info a:hover,
 a:focus,
 a:active {
-    color: rgb(255, 188, 158);
+    color: var(--coral);
     outline: none;
 }
 
 .button {
     display: inline-block;
     text-align: center;
-    color: rgb(255, 255, 255);
+    color: var(--white);
     text-decoration: none;
     font-weight: bold;
     vertical-align: middle;
-    text-shadow: 0 2px 5px rgba(160, 32, 11, 0.76);
-    background: rgb(242, 104, 67);
-    box-shadow: 0 2px 2px rgba(172, 16, 0, 0.64);
-    background-image: linear-gradient(to top, rgb(231, 74, 53), rgb(242, 104, 67));
+    text-shadow: 0 2px 5px var(--button-shadow);
+    background: var(--button-background);
+    box-shadow: 0 2px 2px var(--button-shadow3);
+    background-image: linear-gradient(to top, var(--button-gradient), var(--button-background));
     border-radius: 50px;
     border: none;
     cursor: pointer;
@@ -610,21 +658,21 @@ a:active {
 
 .button:hover,
 .button:focus {
-    box-shadow: 0px 2px 2px 0 rgb(172, 16, 0);
+    box-shadow: 0px 2px 2px 0 var(--button-shadow2);
     background-image: 
-    linear-gradient(to bottom, rgb(225, 225, 225, 0.2), rgb(225, 225, 225, 0.2)), 
-    linear-gradient(to top, rgb(231, 74, 53), rgb(242, 104, 67));
+    linear-gradient(to bottom, var(--button-gradient2), var(--button-gradient2)), 
+    linear-gradient(to top, var(--button-gradient), var(--button-background));
     transition: all 2s;
 }
 .button:active {
-    box-shadow: inset 0px 2px 2px 0 rgb(148, 39, 24);
+    box-shadow: inset 0px 2px 2px 0 var(--button-red);
     background-image: 
-    linear-gradient(to bottom, rgba(0, 0, 0, 0.07), rgba(0, 0, 0, 0.07)), 
-    linear-gradient(to top, rgb(231, 74, 53), rgb(242, 104, 67));
+    linear-gradient(to bottom, var(--button-shadow4), var(--button-shadow4)), 
+    linear-gradient(to top, var(--button-gradient), var(--button-background));
 }
 
 .actions {
-    color: rgb(255, 255, 255);
+    color: var(--white);
     font-size: 18px;
     line-height: 22px;
     margin-bottom: 40px;
@@ -650,12 +698,12 @@ a:active {
 }
 
 .actions-item a {
-    color: rgb(255, 255, 255);
+    color: var(--white);
     text-decoration: none;
     font-size: 18px;
     font-weight: 700;
-    box-shadow: 0px 2px 2px 0 rgba(172, 16, 0, 0.64);
-    background-image: linear-gradient(to top, rgb(231, 74, 53), rgb(242, 104, 67));
+    box-shadow: 0px 2px 2px 0 var(--button-shadow3);
+    background-image: linear-gradient(to top, var(--button-gradient), var(--button-background));
     padding: 14px 22px;
     border-radius: 50px;
     border: none;
@@ -667,7 +715,7 @@ a:active {
     flex-direction: column;
     height: 100%;
     padding: 10px 23px;
-    background-color: rgb(128, 128, 128);
+    background-color: var(--grey);
     background-image: url("../img/raspberries.jpg");
     background-position: 0 0;
     background-repeat: repeat;
@@ -679,7 +727,7 @@ a:active {
     flex-direction: column;
     height: 100%;
     padding: 10px 23px;
-    background-color: rgb(128, 128, 128);
+    background-color: var(--grey);
     background-image: url("../img/chocosprinkle.jpg");
     background-position: 0 0;
     background-repeat: repeat;
@@ -708,7 +756,7 @@ a:active {
     margin-top: 0px;
     padding: 20px 26px;
     border-radius: 15px;
-    background-color: rgb(236, 225, 201);
+    background-color: var(--advantages-back);
     background-image: url("../img/wafer.jpg");
     margin-bottom: 40px;
     margin-top: 30px;
@@ -800,7 +848,7 @@ a:active {
     padding: 20px 26px;
     width: 560px;
     min-height: 220px;
-    background-color: rgb(255, 255, 255);
+    background-color: var(--white);
     background-image: url("../img/strawberry-background.png");
     border-radius: 15px;
 }
@@ -814,15 +862,15 @@ a:active {
     font-size: 24px;
     font-weight: bold;
     line-height: 30px;
-    color: rgb(50, 50, 50);
+    color: var(--basic-grey);
     text-decoration: underline;
 }
 
 .subscription {
     width: 560px;
     padding: 13px 20px;
-    color: rgb(90, 90, 90);
-    background-color: rgb(248, 247, 244);
+    color: var(--dark-grey);
+    background-color: var(--nav-hover);
     border: 5px solid;
     border-radius: 10px;
     border-image: url("../img/post.png") 5 repeat;    ;
@@ -839,20 +887,26 @@ a:active {
     height: 44px;
     padding: 14px;
     border-radius: 5px;
-    border: solid 1px rgba(178, 178, 178, 0.52);
-    background-color: rgb(255, 255, 255);
+    border: solid 1px var(--input-border3);
+    background-color: var(--white);
     font-size: 16px;
     line-height: 22px;
-    color: #5a5a5a;
+    outline: none;
+    color: var(--dark-grey);
     margin-right: 6px ;
 }
 
 .subscription input:hover {
-    border: solid 2px rgba(154, 154, 154, 0.52); 
+    border: solid 2px var(--input-border5); 
 }
 
 .subscription input:focus {
-    border: solid 2px rgba(46, 136, 228, 0.52); 
+    border: solid 2px var(--input-border4); 
+}
+
+.subscription input::placeholder {
+    color: var(--feedback-textarea);
+    font-weight: 400;
 }
 
 .subscription-button {
@@ -866,7 +920,7 @@ a:active {
     display: flex;
     justify-content: center;
     width: 100%;
-    background-color: rgb(193, 233, 183);
+    background-color: var(--color-map);
     background-image: url("../img/map.png");
 }
 
@@ -887,7 +941,7 @@ a:active {
 .contacts {
     width: 303px;
     height: 306px;
-    background-color: rgb(255, 255, 255);
+    background-color: var(--white);
     border-radius: 15px;
     padding: 32px 25px;
     margin: auto 0px;
@@ -911,7 +965,7 @@ a:active {
     font-weight: bold;  
 }
 .tel {
-    color: rgb(50, 50, 50);
+    color: var(--basic-grey);
 }
 
 .feedback {
@@ -924,10 +978,10 @@ a:active {
     width: 478px;
     height: 443px;
     border-radius: 6px;
-    color: rgb(153, 153, 153);
+    color: var(--feedback-textarea);
     font-size: 16px;
     line-height: 25px;
-    background-color: rgb(248, 247, 244);
+    background-color: var(--nav-hover);
     padding: 20px 24px 27px 24px;
     z-index: 15;  
 }
@@ -977,7 +1031,7 @@ a:active {
 }
 
 .feedback h3 {
-    color: rgb(0, 0, 0);
+    color: var(--black);
     font-size: 24px;
     line-height: 28px;
     padding: 0;
@@ -988,9 +1042,9 @@ a:active {
     width: 267px;
     height: 44px;
     border-radius: 5px;
-    border: solid 1px rgba(178, 178, 178, 0.52);
-    background-color: rgb(255, 255, 255);
-    color: rgb(50, 50, 50);
+    border: solid 1px var(--input-border3);
+    background-color: var(--white);
+    color: var(--basic-grey);
     outline: none;
     padding-left: 14px;
     margin-bottom: 20px;
@@ -998,48 +1052,48 @@ a:active {
 
 .feedback input:hover,
 .feedback input:focus {
-    border: solid 2px rgba(46, 136, 228, 0.52); 
+    border: solid 2px var(--input-border4); 
 }
 
 .feedback input::placeholder {
-    color:rgb(153, 153, 153);
-    font-weight:400
+    color: var(--feedback-textarea);
+    font-weight: 400;
 }
 
 .feedback textarea {
     width: 428px;
     height: 155px;
     border-radius: 5px;
-    color:rgb(50, 50, 50);
+    color:var(--basic-grey);
     font-weight: 700;
-    border: solid 1px rgba(178, 178, 178, 0.52);
-    background-color: rgb(255, 255, 255);
+    border: solid 1px var(--input-border3);
+    background-color: var(--white);
     outline: none;
     padding: 14px 16px 14px 16px;
     margin-bottom: 20px;
 }
 
 .feedback textarea::placeholder {
-    color: rgb(153, 153, 153);
+    color: var(--feedback-textarea);
     font-weight: 400;
 }
 
 .feedback textarea:hover,
 .feedback textarea:focus {
-    border: solid 2px rgba(46, 136, 228, 0.52); 
+    border: solid 2px var(--input-border4); 
 }
 
 .feedback-link {
     width: 252px;
     height: 44px;
-    color: rgb(255, 255, 255);
+    color: var(--white);
     text-decoration: none;
     text-align: center;
     font-size: 18px;
     line-height: 24px;
     font-weight: 700;
-    box-shadow: 0px 2px 2px 0 rgba(172, 16, 0, 0.64);
-    background-image: linear-gradient(to top, rgb(231, 74, 53), rgb(242, 104, 67));
+    box-shadow: 0px 2px 2px 0 var(--button-shadow3);
+    background-image: linear-gradient(to top, var(--button-gradient), var(--button-background));
     padding: 13px 0;
     border-radius: 50px;
     border: none;
@@ -1080,7 +1134,7 @@ a:active {
     left: 6px;
     width: 2px;
     height: 22px;
-    background-color: rgb(35, 31, 32);
+    background-color: var(--feedback-close);
 }
     
 .feedback-close::before {
@@ -1093,12 +1147,12 @@ a:active {
 
 .feedback-close:hover::before,
 .feedback-close:hover::after {
-    background-color:rgb(232, 77, 55)
+    background-color: var(--button-gradient);
 }
 
 .feedback-close:focus::before,
 .feedback-close:focus::after {
-    background-color:rgb(232, 77, 55)
+    background-color: var(--button-gradient);
 }
 
 
@@ -1110,7 +1164,7 @@ a:active {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     width: 1200px;
-    color: rgb(255, 255, 255);
+    color: var(--white);
     font-size: 13px;
     list-style: none;
     margin: 0 auto;
@@ -1145,7 +1199,7 @@ a:active {
     margin: 0;
     width: 38px;
     height: 38px;
-    border: 3px solid rgba(255,255,255, 0.5);
+    border: 3px solid var(--social);
     border-radius: 50%;
     background-repeat: no-repeat;
     background-position: center;
@@ -1174,15 +1228,15 @@ a:active {
 }
 
 .footer-nav a{
-    color: rgb(255, 255, 255);
+    color: var(--white);
     text-decoration: none;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.200);  
+    border-bottom: 1px solid var(--nav-background);  
 }
 
 .footer-nav a:hover,
 .footer-nav a:focus,
 .footer-nav a:active {
-    color: rgb(255, 188, 158);
+    color: var(--coral);
 }
 
 .footer-suppliers::before {
@@ -1206,33 +1260,33 @@ a:active {
 }
 
 .copyright p a{
-    color: rgb(255, 255, 255);
+    color: var(--white);
     text-decoration: none;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.200);
+    border-bottom: 1px solid var(--nav-background);
 }
 
 .copyright a:hover,
 .copyright a:focus,
 .copyright a:active {
-    color: rgb(255, 188, 158);
+    color: var(--coral);
 }
 
 .breadcrumbs {
     display: flex;
     align-items: flex-start;
-    color: rgb(255, 255, 255);
+    color: var(--white);
     list-style: none;
     padding: 0;
     margin-top: -20px;
 }
 
 .breadcrumbs a {
-    color: rgb(255, 255, 255);
+    color: var(--white);
 }
 
 .breadcrumbs a:hover,
 .breadcrumbs a:focus {
-    color:rgb(255, 188, 158);
+    color: var(--coral);
 }
 
 .breadcrumbs li {
@@ -1264,14 +1318,14 @@ a:active {
 }
 
 .catalog-item a {
-    text-decoration-color: rgba(255, 255, 255, 0.400);
+    text-decoration-color: var(--text-decoration);
 }
 
 .catalog-item:hover,
 .catalog-item:focus,
 .catalog-item:active {
-    background-color: rgb(255, 255, 255, 0.200);
-    box-shadow: 0px 20px 20px 0 rgba(0, 0, 0, 0.2);
+    background-color: var(--nav-background);
+    box-shadow: 0px 20px 20px 0 var(--shadow2); 
     border-radius: 5px;
     margin-bottom: -66px;
     z-index: 10;
@@ -1283,13 +1337,13 @@ a:active {
 }
 
 .catalog-item h3 {
-    color: rgb(255, 255, 255);
+    color: var(--white);
     font-size: 16px;
     line-height: 22px;
     font-weight: 500;
     text-align: center;
     text-decoration: underline;
-    text-decoration-color: rgb(255, 255, 255, 0.2);
+    text-decoration-color: var(--nav-background);
 }
 
 .image-catalog {
@@ -1299,9 +1353,9 @@ a:active {
 .catalog-price {
     font-size: 45px;
     line-height: 45px;
-    color: rgb(255, 255, 255);
+    color: var(--white);
     font-weight: bold;
-    text-shadow: 0.5px 0.9px 3px rgba(49, 50, 53, 0.5);
+    text-shadow: 0.5px 0.9px 3px var(--price-grey);
     margin: 0;
     padding: 0;
     margin-top: -64px;
@@ -1311,9 +1365,9 @@ a:active {
 .catalog span {
     font-size: 30px;
     line-height: 30px;
-    color: rgb(255, 255, 255);
+    color: var(--white);
     font-weight: bold;
-    text-shadow: 0.5px 0.9px 3px rgba(49, 50, 53, 0.5);
+    text-shadow: 0.5px 0.9px 3px var(--price-grey);
 }
 
 .catalog-button {
@@ -1351,13 +1405,19 @@ a:active {
 
 .pagination-item:hover,
 .pagination-item:focus {
-    background-color: rgb(255, 255, 255, 0.2);
+    background-color: var(--nav-background);
+}
+
+.pagination-item:active,
+.pagination-item a:active{
+    color: var(--black);
+    background-color: var(--white);
 }
 
 .page {
     font-weight: 500;
-    color: rgb(50, 50, 50);
-    background-color: rgb(255, 255, 255);
+    color: var(--basic-grey);
+    background-color: var(--white);
     text-align: center;
     vertical-align: middle;
     
@@ -1366,7 +1426,7 @@ a:active {
 .pagination a {
     position: relative;
     display: inline-block;
-    color: rgb(255, 255, 255);
+    color: var(--white);
     text-decoration: none;
     font-weight: 500;
     font-size: 16px;
@@ -1387,11 +1447,15 @@ a:active {
     right: 8px;
     width: 10px;
     height: 10px;
-    border-top: 2px solid rgb(255, 255, 255);
-    border-right: 2px solid rgb(255, 255, 255);
+    border-top: 2px solid var(--white);
+    border-right: 2px solid var(--white);
     transform: rotate(45deg);
     margin-left: 13px;
+}
 
+.arrow-right:active {
+    border-top: 2px solid var(--black);
+    border-right: 2px solid var(--black);
 }
 
 .arrow-left {
@@ -1400,12 +1464,11 @@ a:active {
     left: 8px;
     width: 10px;
     height: 10px;
-    border-top: 2px solid rgb(255, 255, 255);
-    border-right: 2px solid rgb(255, 255, 255);
+    border-top: 2px solid var(--white);
+    border-right: 2px solid var(--white);
     transform: rotate(-135deg);
     margin-right: 13px;
 }
-
 
 .user-basket:hover + .basket {
     display: flex;
@@ -1423,7 +1486,7 @@ a:active {
     padding: 0 16px 20px;
     border-radius: 5px;
     background-color: #f8f7f4;
-    box-shadow: 0 20px 20px 0 rgba(0,0,0,0.4);
+    box-shadow: 0 20px 20px 0 var(--shadow);
     z-index: 25;
 }
 
@@ -1464,7 +1527,7 @@ a:active {
     width: 1px;
     height: 16px;
     top: -2px;
-    background-color: rgb(0, 0, 0);
+    background-color: var(--black);
     transition: all 0.2s;
 }
 
@@ -1480,7 +1543,7 @@ a:active {
 
 .basket-del-button:hover::before,
 .basket-del-button:hover::after {
-    background-color: rgb(232, 77, 55);
+    background-color: var(--button-gradient); 
 }
 
 .basket-del-button:active {
@@ -1491,7 +1554,7 @@ a:active {
     width: 100%;
     position: relative;
     border-spacing: 0 16px;
-    border-bottom: 1px solid rgb(202, 202, 199);
+    border-bottom: 1px solid var(--basket-line);
     margin-bottom: 15px;
 }
     
@@ -1524,7 +1587,7 @@ a:active {
     width: 238px;
     font-size: 13px;
     line-height: 16px;
-    color: rgb(50, 50, 50);
+    color: var(--basic-grey);
     font-weight: 400;
     padding-left: 3px;
     padding-right: 3px;
@@ -1536,7 +1599,7 @@ a:active {
     text-align: right;
     font-size: 13px;
     line-height: 16px;
-    color:rgb(50, 50, 50);
+    color:var(--basic-grey);
     font-weight: 400;
     padding-left: 3px;
     padding-right: 3px;
@@ -1547,7 +1610,7 @@ a:active {
     text-align: left;
     font-size: 13px;
     line-height: 16px;
-    color: rgb(50, 50, 50);
+    color: var(--basic-grey);
     font-weight: 400;
     padding-left: 3px;
     padding-right: 3px;
@@ -1558,7 +1621,7 @@ a:active {
     text-align: center;
     font-size: 13px;
     line-height: 16px;
-    color: rgb(50, 50, 50);
+    color: var(--basic-grey);
     font-weight: 400;
     padding-left: 3px;
     padding-right: 3px;   
@@ -1570,7 +1633,7 @@ a:active {
     font-size: 15px;
     line-height: 18px;
     font-weight: 700;
-    color: rgb(50, 50, 50);
+    color: var(--basic-grey);
     padding: 0;
     margin: 0;
     margin-bottom: 12px;
@@ -1593,7 +1656,6 @@ a:active {
     justify-content: flex-start;
     align-items: flex-start;
     flex-wrap: wrap;
-    row-gap: 18px;
     width: 100%;
     margin-bottom: 29px;
 }
@@ -1611,12 +1673,13 @@ a:active {
 }
 
 .filters-description {
-    margin-bottom: 6px;
+    margin-bottom: 7px;
     margin-left: 16px;
+    padding-top: 14px;
     font-size: 14px;
     font-weight: 500;
     line-height: 16px;
-    color: rgb(255, 255, 255);
+    color: var(--white);
 }
 
 .filters-sort {
@@ -1628,24 +1691,24 @@ a:active {
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
-    background:rgba(255, 255, 255, 0.2) url(../img/icon-down-dir-white.svg) no-repeat 170px;
+    background: var(--nav-background) url(../img/icon-down-dir-white.svg) no-repeat 170px;
     font-size: 16px;
     line-height: 36px;
     font-weight: 500;
-    color: rgb(255, 255, 255);
+    color: var(--white);
     transition: all 0.2s;
     cursor: pointer;
     padding: 0 26px 0 16px;
 }
 
 .filters-sort:hover {
-    background: rgba(255, 255, 255) url(../img/icon-down-dir.svg) no-repeat 170px;
-    color: rgb(50, 50, 50);
+    background: var(--nav-background) url(../img/icon-down-dir.svg) no-repeat 170px;
+    color: var(--basic-grey);
 }
 
 .filters-sort:focus {
-    background: rgb(255, 255, 255) url(../img/icon-down-dir.svg) no-repeat 170px;
-    color: rgb(50, 50, 50);
+    background: var(--white) url(../img/icon-down-dir.svg) no-repeat 170px;
+    color: var(--basic-grey);
 }
 
 .range-filter {
@@ -1656,10 +1719,11 @@ a:active {
     font-size: 14px;
     line-height: 16px;
     font-weight: 500;
-    color: rgb(255, 255, 255);
+    color: var(--white);
     padding: 0;
     margin: 0;
     padding-left: 16px;
+    padding-top: 14px;
     margin-bottom: 7px;
 }
 
@@ -1676,7 +1740,7 @@ a:active {
     font-size: 14px;
     line-height: 16px;
     font-weight: 500;
-    color: rgb(255, 255, 255);
+    color: var(--white);
     text-align: center;
 }
 
@@ -1688,7 +1752,7 @@ a:active {
     font-size: 14px;
     line-height: 16px;
     font-weight: 500;
-    color: rgb(255, 255, 255);
+    color: var(--white);
 }
 
 .range-filter-controls {
@@ -1697,14 +1761,14 @@ a:active {
     padding-right: 22px;
     padding-left: 22px;
     padding-top: 16px;
-    background-color: rgba(255, 255, 255, 0.2);
+    background-color: var(--nav-background);
     border-radius: 18px;
 }
 
 .range-filter-scale {
     width: 100%;
     height: 4px;
-    background-color: rgb(209, 218, 211);
+    background-color: var(--filter-line);
     position: relative;
 }
 
@@ -1712,13 +1776,17 @@ a:active {
     position: absolute;
     top: 50%;
     margin-top: -11px;
-    width: 20px;
-    height: 24px;
+    width: 22px;
+    height: 25px;
     background-image: url(../img/filter-button.svg);
     background-repeat: no-repeat;
     background-position: center;
     z-index: 10;
     cursor: pointer;
+}
+
+.range-filter-toogle:hover {
+    background-size: 22px auto;
 }
 
 .range-filter-toogle-min {
@@ -1732,10 +1800,10 @@ a:active {
 .range-filter-scale-active {
     position: absolute;
     top: 0;
-    left: 14px;
+    left: 16px;
     width: 63%;
     height: 4px;
-    background-color: rgb(255, 255, 255);
+    background-color: var(--white);
     z-index: 5;
 }
 
@@ -1745,7 +1813,7 @@ a:active {
     align-items: center;
     min-height: 36px;
     border-radius: 18px;
-    background-color: rgba(255, 255, 255, 0.2);
+    background-color: var(--nav-background);
     padding-left: 14px;
     width: 100%;
 }
@@ -1757,7 +1825,7 @@ a:active {
     font-size: 16px;
     line-height: 36px;
     font-weight: 500;
-    color: rgb(255, 255, 255);
+    color: var(--white);
     cursor: pointer;
     outline: none;
 }
@@ -1770,7 +1838,7 @@ a:active {
     margin-top: -11px;
     width: 22px;
     height: 22px;
-    border: 4px solid rgb(255, 255, 255);
+    border: 4px solid var(--white);
     border-radius: 50%;
     opacity: 0.7;
 }
@@ -1789,8 +1857,8 @@ a:active {
     margin-top: -4px;
     width: 8px;
     height: 8px;
-    background-color: rgb(255, 255, 255);
-    box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.2),0 0 0 7px rgb(255, 255, 255);
+    background-color: var(--white);
+    box-shadow: 0 0 0 4px var(--basic-olive), 0 0 0 8px var(--white);
 }
 
 .filter-fat-radio:disabled + label::before {
@@ -1814,7 +1882,7 @@ a:active {
     width: 100%;
     min-height: 36px;
     border-radius: 18px;
-    background-color: rgba(255, 255, 255, 0.2);
+    background-color: var(--nav-background);
     padding-left: 15px;
 }
 
@@ -1831,7 +1899,7 @@ a:active {
     font-size: 16px;
     line-height: 36px;
     font-weight: 500;
-    color: rgb(255, 255, 255);
+    color: var(--white);
     cursor: pointer;
     outline: none;
 }
@@ -1873,7 +1941,7 @@ a:active {
 .filter-button {
     padding-left: 10px;
     padding-right: 10px;
-    border: 2px solid rgb(255, 255, 255);
+    border: 2px solid var(--white);
     border-radius: 18px;
     min-height: 36px;
     min-width: 144px;
@@ -1881,8 +1949,8 @@ a:active {
     font-size: 16px;
     line-height: 18px;
     font-weight: 500;
-    color: rgb(255, 255, 255);
-    background-color: rgba(255, 255, 255, 0.2);
+    color: var(--white);
+    background-color: var(--nav-background);
     cursor: pointer;
     transition: all 0.2s;
     outline: none;
@@ -1890,12 +1958,13 @@ a:active {
 
 .filter-button:hover,
 .filter-button:focus {
-    background-color: rgb(255, 255, 255);
-    color: rgb(50, 50, 50);
+    background-color: var(--white);
+    color: var(--basic-grey);
 }
 
 .filter-button:active {
-    box-shadow: inset 0 2px 1px 0 rgba(105,105,105,0.7);
+    box-shadow: inset 0 2px 1px 0 var(--input-border2);
+    background-color: var(--filter-background);
     border: none;
 }
 

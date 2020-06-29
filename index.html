@@ -52,6 +52,7 @@
                  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="17" height="17" viewBox="0 0 17 17"><path fill="currentColor" d="M16.958 15.527L11.75 10.32A6.455 6.455 0 0 0 13 6.5 6.5 6.5 0 1 0 6.5 13a6.465 6.465 0 0 0 3.839-1.263l5.205 5.204 1.414-1.414zM6.5 11C4.019 11 2 8.981 2 6.5S4.019 2 6.5 2 11 4.019 11 6.5 8.981 11 6.5 11z"/></svg>
                 </a>
                <form class="search-form" action="https://echo.htmlacademy.ru/courses" method="get">
+                 <label for="search" class="visually-hidden">Что ищем?</label>
                  <input id="search" name="search" type="search" placeholder="Что ищем?">
                </form>
              </li>
@@ -66,7 +67,9 @@
                  <span class="user-link-text">Вход</span>
                 </a> 
                 <form class="user-form" action="https://echo.htmlacademy.ru/courses" method="post">
+                  <label for="user-email" class="visually-hidden" >Электронная почта</label>
                   <input type="email" id="user-email" name="email" placeholder="email@example.com" autocomplete="on">
+                  <label for="user-password" class="visually-hidden">Пароль</label>
                   <input type="password" id="user-password" name="password" placeholder="Пароль">
                   <div class="user-form-bottom-container">
                     <button class="button button-user-form" type="submit">Войти</button>
@@ -199,7 +202,8 @@
         <h2 class="visually-hidden">Подписка</h2> 
          <p>Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
            <form action="subscription" name="subscription" >
-            <input type="email" placeholder="Электронная почта">
+            <label for="subscription-email" class="visually-hidden">Электронная почта для рассылки</label>
+            <input type="email" id="subscription-email" placeholder="Электронная почта">
             <button type="submit" class="button subscription-button">Отправить</button>
           </form>
         </section>
@@ -209,10 +213,11 @@
             <!--Форма обратной связи:-->
             <form class="feedback feedback-open" action="https://echo.htmlacademy.ru/courses" method="post">
               <h3>Мы обязательно Вам ответим!</h3>
-              <label for="username"></label>
+              <label for="username" class="visually-hidden">Ваше имя</label>
               <input type="text" id="username" name="username" placeholder="Имя Фамилия" autocomplete="on" required>
-              <label for="contact-email"></label>
+              <label for="contact-email" class="visually-hidden">Электронная почта</label>
               <input type="email" id="contact-email" name="email" placeholder="email@example.com" required>
+              <label for="comment-field" class="visually-hidden">Оставьте комментарий в свободной форме</label> 
               <textarea name="comment" id="comment-field" rows="10" placeholder="В свободной форме" required></textarea>
               <button class="feedback-button button" type="submit">Отправить</button>
               <button class="feedback-close" tabindex="0" aria-label="Закрыть"></button>
